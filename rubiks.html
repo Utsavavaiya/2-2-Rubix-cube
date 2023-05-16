@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2x2 Rubik's Cube Solver</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="rubiks.css">
+</head>
+<body>
+    <!-- header -->
+    <div id="banner">
+        2x2 Rubik's Cube Solver
+    </div>
+    <!--instructions section -->
+    <div id="instructions">
+        <div id="instructHead" class="points">
+            Instructions
+        </div>
+        <div id="firstPoint" class="points">
+            In the solution- R, L, U, D, F, B stand for right, left, top, bottom, front and back faces respectively
+        </div>
+        <div class="points">
+            MRFF stands for 'Move right face to the front'
+        </div>
+        <div class="points">
+            MLFF stands for 'Move left face to the front'
+        </div>
+        <div class="points">
+            MRFT stands for 'Move right face to the top'
+        </div>
+        <div class="points">
+            For any move X, bring that face to the front and rotate it once in clockwise direction
+        </div>
+        <div id="lastPoint" class="points">
+            For any move X', bring that face to the front and rotate it once in anticlockwise direction
+        </div>
+    </div>
+    <!-- colour buttons -->
+    <div id="heading">
+        Fill in the appropriate colours and hit solve!
+    </div>
+    <div id="colours">
+        <div id="yellow" class="colourbtn"></div>
+        <div id="green" class="colourbtn"></div>
+        <div id="white" class="colourbtn"></div>
+        <div id="blue" class="colourbtn"></div>
+        <div id="orange" class="colourbtn"></div>
+        <div id="red" class="colourbtn"></div>
+    </div>
+    <!-- 2D map of the rubik's cube -->
+    <div id="map">
+        <div id="layerone">
+            <div id="back" class="surfaces">
+                <div class="line">
+                    <div class="boxes"></div>
+                    <div class="boxes"></div>
+                </div>
+                <div class="line">
+                    <div class="boxes"></div>
+                    <div class="boxes"></div>
+                </div>
+            </div>
+        </div>
+        <div id="layertwo">
+            <div id="left" class="surfaces">
+                <div class="line">
+                    <div class="boxes"></div>
+                    <div class="boxes"></div>
+                </div>
+                <div class="line">
+                    <div class="boxes"></div>
+                    <div class="boxes"></div>
+                </div>
+            </div>
+            <div id="top" class="surfaces">
+                <div class="line">
+                    <div class="boxes"></div>
+                    <div class="boxes"></div>
+                </div>
+                <div class="line">
+                    <div class="boxes"></div>
+                    <div class="boxes"></div>
+                </div>
+            </div>
+            <div id="right" class="surfaces">
+                <div class="line">
+                    <div class="boxes"></div>
+                    <div class="boxes"></div>
+                </div>
+                <div class="line">
+                    <div class="boxes"></div>
+                    <div class="boxes"></div>
+                </div>
+            </div>
+            <div id="bottom" class="surfaces">
+                <div class="line">
+                    <div class="boxes"></div>
+                    <div class="boxes"></div>
+                </div>
+                <div class="line">
+                    <div class="boxes"></div>
+                    <div class="boxes"></div>
+                </div>
+            </div>
+        </div>
+        <div id="layerthree">
+            <div id="front" class="surfaces">
+                <div class="line">
+                    <div class="boxes"></div>
+                    <div class="boxes"></div>
+                </div>
+                <div class="line">
+                    <div class="boxes"></div>
+                    <div class="boxes"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- reset and solve buttons -->
+    <div id="buttons">
+        <div id="reset" class="button">
+            Reset
+        </div>
+        <div id="solve" class="button">
+            Solve
+        </div>
+    </div>
+    <!-- for displaying the solution -->
+    <div id="solution">
+        <div class="soln">Step-by-step Solution</div>
+        <div class="soln marg">Step-1: Solving the base layer</div>
+        <div id="step1" class="soln"></div>
+        <div class="soln marg">Step-2: Orienting the top layer</div>
+        <div id="step2" class="soln"></div>
+        <div class="soln marg">Step-3: Permuting both the layers</div>
+        <div id="step3" class="soln"></div>
+    </div>
+    <div id="solved" class="soln">
+        Already Solved!!
+    </div>
+    <!-- footer -->
+    <div id="footer"></div>
+    <!-- linking the javascript file -->
+    <script src="rubiks.js"></script>
+</body>
+</html>
