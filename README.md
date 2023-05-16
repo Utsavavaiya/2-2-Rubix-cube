@@ -1,1 +1,1 @@
-# 2-2-Rubix-cube
+# 2-2-Rubix-cube solver
